@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe ProjectsController, type: :controller do
+    # Require user to login before they can make any changes to the portfolio
+    login_user
+
     context "GET #index" do
         it "returns a success response" do
             get :index
